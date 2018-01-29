@@ -1,11 +1,12 @@
 import React from 'react';
+import LoginDialog from '../components/LoginDialog';
 
 class App extends React.Component{
 
 	render(){
 		return(
 			<div>
-				<h1>Hi! It works! Wait what. Yay! Whoa.</h1>
+				<LoginDialog loggedIn={false}/>
 			</div>
 		);
 	}
