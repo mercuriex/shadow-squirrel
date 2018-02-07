@@ -1,0 +1,8 @@
+.progress-container {
+    width: 200px;
+    margin:auto;
+    position: absolute;
+    left: 0; bottom: calc(10vh + 250px); right: 0;
+    display: flex;
+    justify-content: space-between;
+}

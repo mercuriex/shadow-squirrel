@@ -4,7 +4,7 @@
   "main": "electron.start.js",
   "scripts": {
     "start": "electron .",
-    "build": "cross-env NODE_ENV=production parcel build . --no-minify --public-url /"
+    "build": "cross-env NODE_ENV=production parcel build . --no-minify --public-url ."
   },
   "dependencies": {
     "autoprefixer": "^7.2.5",
@@ -13,6 +13,7 @@
     "electron": "^1.7.10",
     "execa": "^0.9.0",
     "fs": "^0.0.1-security",
+    "lodash": "^4.17.4",
     "parcel-bundler": "^1.4.1",
     "path": "^0.12.7",
     "postcss-modules": "^1.1.0",

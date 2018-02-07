@@ -1,0 +1,48 @@
+.container {
+    width: 300px;
+    margin: auto;
+    position: absolute;
+    left: 0; bottom: 10vh; right: 0;
+    border: 1px solid indianred;
+    animation: shakeup 0.5s linear;
+}
+
+.numberGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    font-family: 'Lato', sans-serif;
+}
+
+.numberGrid>div{
+    text-align: center;
+    font-size: 25px;
+    padding: 10px 0 10px 0;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.selectable:hover{
+    background: #222222;
+}
+
+.selectable:active{
+    background: #333333;
+    /*color: red;*/
+}
+
+.upper{
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+}
+
+.lower{
+    border-left: 1px solid #333333;
+}
+
+@keyframes shakeup{
+    from{opacity: 0}
+    to{opacity: 1}
+}

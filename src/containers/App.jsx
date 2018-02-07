@@ -1,12 +1,26 @@
 import React from 'react';
-import LoginDialog from '../components/LoginDialog';
+import Login from '../components/Login';
 
 class App extends React.Component{
+
+	constructor(){
+		super();
+		this.state = {
+			loggedIn: false
+		};
+		this.setLoggedIn = this.setLoggedIn.bind(this);
+	}
+
+	setLoggedIn(){
+		this.setState({
+			loggedIn: true
+		});
+	}
 
 	render(){
 		return(
 			<div>
-				<LoginDialog loggedIn={false}/>
+				<Login loggedIn={this.state.loggedIn} setLoggedIn={this.setLoggedIn}/>
 			</div>
 		);
 	}
