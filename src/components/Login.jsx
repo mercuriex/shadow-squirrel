@@ -16,15 +16,26 @@ class Login extends React.Component {
 
 	updatePINEntered(digit){
 
-		// if decrement is specified, reduce digit number and remove last digit
-		if(digit <= -1 && this.state.pinEntries > 0){
-			this.setState({
-				pinEntries: this.state.pinEntries - 1,
-				pinEntered: this.state.pinEntered.slice(0, -1)
-			});
+		// decrement is specified via -1
+		if(digit <= -1){
+
+			// we have at least one entry already, take one off
+			if(this.state.pinEntries > 0){
+				this.setState({
+					pinEntries: this.state.pinEntries - 1,
+					pinEntered: this.state.pinEntered.slice(0, -1)
+				});
+			}
+
+			// we have no entries, so don't do anything
+			else{
+				return;
+			}
 		}
 
 		// else, handle increment
+		// replace callback with checkPIN function
+		// decouple login logic on backend
 		else{
 			this.setState({
 				pinEntries: this.state.pinEntries + 1,
