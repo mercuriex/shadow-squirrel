@@ -1,6 +1,6 @@
 import React from 'react';
-import PINProgress from './PINProgress';
-import PINPad from './PINPad';
+import PINProgress from '../../components/PINPad/PINProgress';
+import PINPad from '../../components/PINPad/PINPad';
 
 class Login extends React.Component {
 
